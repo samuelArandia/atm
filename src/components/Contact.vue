@@ -1,77 +1,154 @@
 <template>
   <section class="pb-8" id="contact">
-    <v-container fluid>
+    <v-container class="pa-4">
       <v-row align="center" justify="center">
-        <v-col cols="10">
-          <v-row justify="center">
-            <v-col cols="12" md="6">
-              <h1 class="font-weight-light display-1">Contáctanos</h1>
-              <h3 class="font-weight-light mt-3">
-                Condiciones para arrendar con nosotros: 
-              </h3>
-              <p class="font-weight-light mt-3">-El monto de la garantía dependerá de la herramienta o maquinaria que desee arrendar.</p> 
-              <p class="font-weight-light mt-3">-La garantía le será restituida al término del servicio de arriendo, cuando devuelva las herramientas o equipos en buen estado.</p>
-              <p class="font-weight-light mt-3">-El arriendo excluye los insumos y los accesorios de desgaste como brocas, discos, cuchillas, entre otros. </p>
-              <h3 class="font-weight-light mt-3">
-                Para operaciones y logistica:
-              </h3>
-              <h3 class="font-weight-light mt-3">
-                Telefone: +56961910135
-              </h3>
-              <h3 class="font-weight-light">
-                Email: angelm@atodamakina.cl
-              </h3>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <v-form ref="form" v-model="valid" :lazy-validation="lazy">
-                <v-text-field
-                    v-model="name"
-                    :rules="nameRules"
-                    label="Nombre"
-                    required
-                ></v-text-field>
-
-                <v-text-field
-                    v-model="email"
-                    :rules="emailRules"
-                    label="E-mail"
-                    required
-                ></v-text-field>
-
-                <v-textarea
-                    v-model="textArea"
-                    :rules="textAreaRules"
-                    label="Mensaje"
-                    required
-                />
-
-                <v-btn
-                    :disabled="!valid"
-                    color="#F0A500"
-                    :dark="valid"
-                    rounded
-                    block
-                    class="mt-3"
-                    @click="submit"
-                >
-                  Enviar
-                </v-btn>
-              </v-form>
-            </v-col>
-          </v-row>
+        <v-col cols="12" md="6">
+          <h1 class="font-weight-light display-1  mb-15" style="color:#F0A500;">¡Contáctanos hoy!</h1>
+          <h3 class="font-weight-light mt-3">
+            ¿Como arrendar con nosotros?
+          </h3>
+          <p class="font-weight-light mt-3">-Contáctanos vía mail o al botón de whatsapp de nuestra web o complete el fomulario.</p> 
+          <p class="font-weight-light mt-3">-Indícanos las herramientas a utilizar, cantidad, ubicación de despacho y el tiempo de uso.</p> 
+          <p class="font-weight-light mt-3">-Te enviaremos una cotización, una vez aprobada, despachamos tus herramientas y puedes empezar a difurtar de nuestros servicios.</p>
+          <p class="font-weight-light mt-3" style="color:#F0A500;">Tienes alguna consulta, no dudes en llamarnos </p>
+          <h3 class="font-weight-light mt-3">
+            Para operaciones y logistica:
+          </h3>
+          <a class="font-weight-light mt-3" style="color:#F0A500; text-decoration: none;" href="tel:+56961910135">
+            Teléfono: +56961910135
+          </a>
+          <br>
+          <a href="tel:+56228482011"  class="font-weight-light mt-3" style="color:#F0A500; text-decoration: none;">
+          Oficina: +56228482011
+          </a>
+          <br>
+          <a class="font-weight-light" href="mailto:angelm@atodamakina.cl" style="color:#F0A500; text-decoration: none;">
+            Email: angelm@atodamakina.cl
+          </a>
+        </v-col>
+        <v-col cols="12" md="6">
+          <div id="app">
+            <form>
+              <v-text-field
+                v-model="form.name"
+                label="Nombre"
+                required
+                :error-messages="nameErrors"
+                @input="$v.form.name.$touch()"
+                @blur="$v.form.name.$touch()"
+              ></v-text-field>  
+              <v-text-field
+                v-model="form.email"
+                label="E-mail"
+                required
+                :error-messages="emailErrors"
+                @input="$v.form.email.$touch()"
+                @blur="$v.form.email.$touch()"
+              ></v-text-field>  
+              <v-textarea
+                v-model="form.message"
+                label="Mensaje"
+                required
+                :error-messages="messageErrors"
+                @input="$v.form.message.$touch()"
+                @blur="$v.form.message.$touch()"
+              ></v-textarea>
+              <v-btn
+                class="mr-4"
+                @click="submit"
+                color="#F0A500"
+              >
+                Enviar 
+              </v-btn>
+              <v-btn @click="clear">
+                Limpiar
+              </v-btn>
+            </form>
+          </div>
         </v-col>
       </v-row>
     </v-container>
-    <div class="svg-border-waves text-white">
-      <v-img src=""/>
-    </div>
   </section>
 </template>
 
+<script>
+import { validationMixin } from 'vuelidate';
+import { email, required } from 'vuelidate/lib/validators';
+
+export default{
+  mixins: [validationMixin],
+  data() {
+    return {
+      form: { 
+        name: '',
+        email: '', 
+        message: '',
+        }
+    };
+  },
+  validations () {
+    return {
+      form: {
+        name: { required },
+        email: { required, email },
+        message: { required },
+      }
+    }
+  },
+  computed: {
+      nameErrors () {
+        const errors = []
+        if (!this.$v.form.name.$dirty) return errors
+        !this.$v.form.name.required && errors.push('Nombre es requerido')
+        return errors
+      },
+      emailErrors () {
+        const errors = []
+        if (!this.$v.form.email.$dirty) return errors
+        !this.$v.form.email && errors.push('Ingrese un correo valido')
+        !this.$v.form.email.required && errors.push('E-mail es requerido')
+        return errors
+      },
+      messageErrors () {
+        const errors = []
+        if (!this.$v.form.message.$dirty) return errors
+        !this.$v.form.message && errors.push('Ingreso un mesaje')
+        !this.$v.form.message.required && errors.push('Mensaje es requerido')
+        return errors
+      },
+  },
+
+  methods: {
+    submit() {
+      console.log(this.form);
+      this.$v.$touch()
+      if (!this.$v.$invalid) {
+        alert('Formulario enviado');
+        this.clear()
+      }
+    },
+    clear() {
+      this.$v.$reset()
+      this.form.name = ''
+      this.form.email = ''
+      this.form.message = ''
+    },
+  },
+};
+</script>
+
 <style scoped>
-#contact {
-  background-color: #f4f7f5;
-  height: auto;
+#contact{
+  display: grid;  
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+}
+
+@media only screen and (max-width: 992px) {
+  #contact {
+    height: auto;
+  }
 }
 .svg-border-waves .v-image {
   position: absolute;
@@ -82,7 +159,3 @@
   overflow: hidden;
 }
 </style>
-
-<script>
-
-</script>

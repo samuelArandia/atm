@@ -16,6 +16,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '../src/scss/global.scss';
+
+html{
+  width: 100%;
+}
 
 </style>
+
+
+

@@ -5,9 +5,8 @@
   >
     <NavBar />
     <HomeView /> 
-    <Client />
-    <Catalog />
     <About />
+    <Catalog />
     <Contact />
     <Footer />
     <v-btn
@@ -18,7 +17,7 @@
       raised
       rounded
       color="#00E676"
-      href="https://wa.me/+56961910135/?text=Hola,%20Quiero%20arrendar%20con%20ustedes!!" target="_blank"
+      href="https://wa.me/+56961910135/?text=Hola,%20¡Quiero%20arrendar%20con%20ustedes!" target="_blank"
     ><v-icon color="white" href="">fa-brands fa-whatsapp</v-icon></v-btn>
   </v-app>
 </template>
@@ -29,7 +28,6 @@ import HomeView from "../components/HomeView.vue";
 import Footer from "../components/Footer.vue";
 import About from "../components/About.vue";
 import Contact from "../components/Contact.vue";
-import Client from "../components/Client.vue";
 import Catalog from "../components/Catalog.vue";
 
 export default {
@@ -37,7 +35,7 @@ export default {
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
   }),
-  components: { NavBar, Footer, HomeView, About, Contact, Client, Catalog },
+  components: { NavBar, Footer, HomeView, About, Contact, Catalog },
 };
 </script>
 
@@ -45,8 +43,15 @@ export default {
 <style scoped>
 .whatsapp{
 position: fixed;
-bottom: 20px;
+bottom: 70px;
 right:50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .whatsapp{
+    position: fixed;
+    bottom: 50px;
+  }
 }
 
 </style>

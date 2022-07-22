@@ -47,10 +47,6 @@
       class="px-15"
       :class="{ expand: flat }"
     >
-      <v-toolbar-title>
-        <v-img src="../assets/atm.png" max-width="50px" />
-      </v-toolbar-title>
-      <v-spacer />
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
         class="mr-4"
@@ -60,20 +56,33 @@
         <v-btn text @click="$vuetify.goTo('#home-view')">
           <span class="mr-2">HOME</span>
         </v-btn>
-        <v-btn text @click="$vuetify.goTo('#client')">
+        <!-- <v-btn text @click="$vuetify.goTo('#client')">
           <span class="mr-2">CLIENTES</span>
+        </v-btn> -->
+        <v-btn text @click="$vuetify.goTo('#about')">
+          <span class="mr-2">NOSOTROS</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#catalog')">
           <span class="mr-2">CATÁLOGO</span>
-        </v-btn>
-        <v-btn text @click="$vuetify.goTo('#about')">
-          <span class="mr-2">NOSOTROS</span>
         </v-btn>
         <v-btn rounded outlined text @click="$vuetify.goTo('#contact')">
           <span class="mr-2">CONTACTANOS</span>
         </v-btn>
       </div>
+      <v-spacer />
+      <v-toolbar-title>
+        <v-img src="../assets/atm.png" max-width="50px" />
+      </v-toolbar-title>
+        <v-btn class="ma-2" dark @click="toggleTheme" text rounded>
+          <v-icon v-if="$vuetify.theme.dark">
+            light_mode
+          </v-icon>
+          <v-icon v-else>
+            dark_mode
+          </v-icon>
+        </v-btn>
     </v-app-bar>
+
   </div>
 </template>
 
@@ -84,8 +93,7 @@ export default {
     isXs: false,
     items: [
       ["mdi-home-outline", "Home", "#home-view"],
-      ["mdi-currency-usd", "Clientes", "#client"],
-      ["mdi-information-outline", "Nostros", "#about"],
+      ["mdi-information-outline", "Nosotros", "#about"],
       ["mdi-download-box-outline", "Catalogo", "#catalog"],
       ["mdi-email-outline", "Contacto", "#contact"],
     ],
@@ -96,7 +104,11 @@ export default {
   },
   methods: {
     onResize() {
-      this.isXs = window.innerWidth < 850;
+      this.isXs = window.innerWidth < 1000;
+    },
+    toggleTheme(){
+      this.$vuetify.theme.themes.dark.anchor = '#222831'
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
   watch: {
