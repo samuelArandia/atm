@@ -1,9 +1,9 @@
 <template>
     <section class="pb-8" id="clients">
         <v-container class="pa-4">
-            <v-row align="center" justify="center">
-                <h3 class="font-weight-light display-2 mb-10 mt-5">ELLOS CONFIAN EN NOSOTROS</h3>
-            </v-row>
+        <v-row align="center" justify="center">
+            <h1 class=" font-weight-light display-2 mb-10 mt-5  mb-15" style="color: white">Nuestos <span>Clientes</span></h1>
+        </v-row>
             <div class="clientes">
                 <img src="../assets/convet.png" class="imgCircular">
                 <img src="../assets/grevia.jpg" class="imgCircular">
@@ -16,6 +16,9 @@
                 <img src="../assets/paz.png" class="imgCircular">
                 <img src="../assets/izquierdo.png" class="imgCircular">
             </div>
+            <v-row align="center" justify="center">
+                <h3 class="font-weight-light display-1 mt-15">ELLOS CONFIAN EN NOSOTROS</h3>
+            </v-row>
         </v-container>
     </section>
 </template>
@@ -31,6 +34,9 @@
     width: 100%;
     height: 95vh;
     background-color: rgb(177, 175, 175);
+}
+span{
+    font-weight: bold;
 }
 .clientes{
     display: grid;

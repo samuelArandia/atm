@@ -3,7 +3,7 @@
     <v-container class="pa-4">
       <v-row align="center" justify="center">
         <v-col cols="12" md="6">
-          <h1 class="font-weight-light display-1  mb-15" style="color:#F0A500;">¡Contáctanos hoy!</h1>
+          <h1 class="font-weight-light display-1  mb-15" style="color:#F0A500;"> <span>¡Contáctanos</span> hoy!</h1>
           <h3 class="font-weight-light mt-3">
             ¿Como arrendar con nosotros?
           </h3>
@@ -140,6 +140,9 @@ export default{
   height: 95vh;
 }
 
+span{
+  font-weight: bold;
+}
 @media only screen and (max-width: 992px) {
   #contact {
     height: auto;

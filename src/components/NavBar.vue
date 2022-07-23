@@ -66,7 +66,7 @@
           <span class="mr-2">CATÁLOGO</span>
         </v-btn>
         <v-btn rounded outlined text @click="$vuetify.goTo('#contact')">
-          <span class="mr-2">CONTACTANOS</span>
+          <span class="mr-2">CONTÁCTANOS</span>
         </v-btn>
       </div>
       <v-spacer />

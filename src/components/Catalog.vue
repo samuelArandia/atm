@@ -1,7 +1,7 @@
 <template>
   <section class="pb-8" id="catalog">
     <v-container class="pa-4 text-center">
-      <h2 class="font-weight-light display-2 mb-10 mt-5" style="color:#F0A500;">Nuestro Catálogo</h2>
+      <h2 class="font-weight-light display-2 mb-10 mt-5" style="color:#F0A500;">Nuestro <span>Catálogo</span> </h2>
       <v-row
         class="fill-height"
         align="center"
@@ -85,6 +85,9 @@ import imagen6 from '@/assets/generador.avif';
 <style scoped>
 #catalog {
   height: 100vh;
+}
+span{
+  font-weight: bold;
 }
 @media only screen and (max-width: 992px) {
   #catalog {

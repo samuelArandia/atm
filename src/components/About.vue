@@ -6,9 +6,9 @@
           <v-img src="../assets/equipo.jpg" class="d-block ml-auto mr-auto" max-width="100%" height="400px" style="box-shadow: 0px 1px 11px 0px #000000;"></v-img>
         </v-col>
         <v-col cols="12" md="6">
-          <h1 class="font-weight-light display-2 mb-10" style="color:#F0A500;">
-          Sobre Nosotros
-          </h1>
+          <h2 class="font-weight-light display-2 mb-10" style="color:#F0A500;">
+          Sobre <span>Nosotros</span> 
+          </h2>
           <h1 class="font-weight-light display-1 mb-3">
             ¡Confianza y experiencia!
           </h1>
@@ -43,6 +43,9 @@
   height: 100vh;
   display: grid;  
   align-items: center;
+}
+span{
+  font-weight: bold;
 }
 @media (max-width: 992px) {
   #about{
