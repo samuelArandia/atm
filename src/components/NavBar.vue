@@ -54,13 +54,13 @@
       />
       <div v-else>
         <v-btn text @click="$vuetify.goTo('#home-view')">
-          <span class="mr-2">HOME</span>
+          <span class="mr-2">INICIO</span>
         </v-btn>
-        <!-- <v-btn text @click="$vuetify.goTo('#client')">
-          <span class="mr-2">CLIENTES</span>
-        </v-btn> -->
         <v-btn text @click="$vuetify.goTo('#about')">
           <span class="mr-2">NOSOTROS</span>
+        </v-btn>
+        <v-btn text @click="$vuetify.goTo('#clients')">
+          <span class="mr-2">CLIENTES</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#catalog')">
           <span class="mr-2">CATÁLOGO</span>
@@ -94,6 +94,7 @@ export default {
     items: [
       ["mdi-home-outline", "Home", "#home-view"],
       ["mdi-information-outline", "Nosotros", "#about"],
+      ["mdi-information-outline", "Clientes", "#clients"],
       ["mdi-download-box-outline", "Catalogo", "#catalog"],
       ["mdi-email-outline", "Contacto", "#contact"],
     ],

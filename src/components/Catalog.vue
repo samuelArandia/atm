@@ -1,7 +1,7 @@
 <template>
   <section class="pb-8" id="catalog">
     <v-container class="pa-4 text-center">
-      <h2 class="font-weight-light display-2 mb-15 mt-15 " style="color:#F0A500;">Nuestro Catálogo</h2>
+      <h2 class="font-weight-light display-2 mb-10 mt-5" style="color:#F0A500;">Nuestro Catálogo</h2>
       <v-row
         class="fill-height"
         align="center"
@@ -10,6 +10,9 @@
         <template v-for="(item, index) in items">
           <v-col :key="index" cols="12" md="4"
           >
+            <h3 class="mt-4 mb-5 subheading text-center" style="color: #F0A500;">
+              {{ item.title }}
+            </h3>
             <v-hover v-slot="{ hover }">
               <v-card
                 :elevation="hover ? 12 : 2"
@@ -24,9 +27,6 @@
                       class="fill-height flex-column"
                       justify="space-between"
                     >
-                      <p class="mt-4 subheading text-center" style="color: #F0A500;">
-                        {{ item.title }}
-                      </p>
                     </v-row>
                   </v-card-title>
                 </v-img>
@@ -99,7 +99,7 @@ color: #F0A500;
 }
 
 .v-card:not(.on-hover) {
-  opacity: 0.6;
+  opacity: 0.7;
  }
 
 </style>

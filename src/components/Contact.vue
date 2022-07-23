@@ -10,16 +10,15 @@
           <p class="font-weight-light mt-3">-Contáctanos vía mail o al botón de whatsapp de nuestra web o complete el fomulario.</p> 
           <p class="font-weight-light mt-3">-Indícanos las herramientas a utilizar, cantidad, ubicación de despacho y el tiempo de uso.</p> 
           <p class="font-weight-light mt-3">-Te enviaremos una cotización, una vez aprobada, despachamos tus herramientas y puedes empezar a difurtar de nuestros servicios.</p>
-          <p class="font-weight-light mt-3" style="color:#F0A500;">Tienes alguna consulta, no dudes en llamarnos </p>
-          <h3 class="font-weight-light mt-3">
-            Para operaciones y logistica:
+          <h3 class="font-weight-light mt-3 mb-4">
+            Si tienes alguna consulta, no dudes en llamarnos
           </h3>
-          <a class="font-weight-light mt-3" style="color:#F0A500; text-decoration: none;" href="tel:+56961910135">
+          <a class="font-weight-light mt-5" style="color:#F0A500; text-decoration: none;" href="tel:+56961910135">
             Teléfono: +56961910135
           </a>
           <br>
           <a href="tel:+56228482011"  class="font-weight-light mt-3" style="color:#F0A500; text-decoration: none;">
-          Oficina: +56228482011
+            Oficina: +56228482011
           </a>
           <br>
           <a class="font-weight-light" href="mailto:angelm@atodamakina.cl" style="color:#F0A500; text-decoration: none;">
@@ -53,14 +52,10 @@
                 @input="$v.form.message.$touch()"
                 @blur="$v.form.message.$touch()"
               ></v-textarea>
-              <v-btn
-                class="mr-4"
-                @click="submit"
-                color="#F0A500"
-              >
+              <v-btn class="mr-4 mt-4" @click="submit" color="#F0A500">
                 Enviar 
               </v-btn>
-              <v-btn @click="clear">
+              <v-btn class="mr-4 mt-4" @click="clear">
                 Limpiar
               </v-btn>
             </form>

@@ -3,11 +3,11 @@
     <v-container class="pa-4 text-center">
       <v-row align="center" justify="center">
         <v-col cols="12" md="6" class="mt-200 team">
-          <v-img src="../assets/equipo.jpg" class="d-block ml-auto mr-auto" max-width="100%" height="400px"></v-img>
+          <v-img src="../assets/equipo.jpg" class="d-block ml-auto mr-auto" max-width="100%" height="400px" style="box-shadow: 0px 1px 11px 0px #000000;"></v-img>
         </v-col>
         <v-col cols="12" md="6">
           <h1 class="font-weight-light display-2 mb-10" style="color:#F0A500;">
-          Sobre nosotros 
+          Sobre Nosotros
           </h1>
           <h1 class="font-weight-light display-1 mb-3">
             ¡Confianza y experiencia!
@@ -15,7 +15,7 @@
           <v-row>
             <v-col cols="12" class="d-flex align-center">
               <p class="text-justify">
-                Es un agradado saludarle y poner a su disposición nuestros servicios de arriendos, ventas de maquinarias e insumos para la construcción y la industria, además de servicio técnico a equipos y maquinarias. A TODA MAKINA SPA, es una empresa que se especializa en el alquiler de herramientas y equipos para la construcción.
+                A TODA MAKINA SPA, es una empresa que se especializa en el alquiler de herramientas y equipos para la construcción. Es un agradado saludarle y poner a su disposición nuestros servicios de arriendos, ventas de maquinarias e insumos para la construcción y la industria, además de servicio técnico a equipos y maquinarias.
               </p>
             </v-col>
             <v-col cols="12" class="d-flex align-center">

@@ -6,6 +6,7 @@
     <NavBar />
     <HomeView /> 
     <About />
+    <Clients />
     <Catalog />
     <Contact />
     <Footer />
@@ -29,13 +30,14 @@ import Footer from "../components/Footer.vue";
 import About from "../components/About.vue";
 import Contact from "../components/Contact.vue";
 import Catalog from "../components/Catalog.vue";
+import Clients from "../components/Clients.vue";
 
 export default {
   name: "Home",
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
   }),
-  components: { NavBar, Footer, HomeView, About, Contact, Catalog },
+  components: { NavBar, Footer, HomeView, About, Contact, Catalog, Clients },
 };
 </script>
 
