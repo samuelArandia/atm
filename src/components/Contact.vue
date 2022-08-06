@@ -7,7 +7,7 @@
           <h3 class="font-weight-light mt-3">
             ¿Como arrendar con nosotros?
           </h3>
-          <p class="font-weight-light mt-3">-Contáctanos vía mail o al botón de whatsapp de nuestra web o complete el fomulario.</p> 
+          <p class="font-weight-light mt-3">-Contáctanos vía mail o al botón de whatsapp de nuestra web o complete el fomulario y presione enviar.</p> 
           <p class="font-weight-light mt-3">-Indícanos las herramientas a utilizar, cantidad, ubicación de despacho y el tiempo de uso.</p> 
           <p class="font-weight-light mt-3">-Te enviaremos una cotización, una vez aprobada, despachamos tus herramientas y puedes empezar a difurtar de nuestros servicios.</p>
           <h3 class="font-weight-light mt-3 mb-4">
@@ -27,8 +27,11 @@
         </v-col>
         <v-col cols="12" md="6">
           <div id="app">
-            <form>
+            <form  action="https://formsubmit.co/995fa971b79c64054b8e1c56086dac2f" method="POST">
               <v-text-field
+                type="text"
+                id="nombre"
+                name="nombre"
                 v-model="form.name"
                 label="Nombre"
                 required
@@ -37,6 +40,9 @@
                 @blur="$v.form.name.$touch()"
               ></v-text-field>  
               <v-text-field
+                type="email"
+                id="email"
+                name="email"
                 v-model="form.email"
                 label="E-mail"
                 required
@@ -45,14 +51,16 @@
                 @blur="$v.form.email.$touch()"
               ></v-text-field>  
               <v-textarea
+                id="mensaje"
                 v-model="form.message"
                 label="Mensaje"
+                name="mensaje"
                 required
                 :error-messages="messageErrors"
                 @input="$v.form.message.$touch()"
                 @blur="$v.form.message.$touch()"
               ></v-textarea>
-              <v-btn class="mr-4 mt-4" @click="submit" color="#F0A500">
+              <v-btn class="mr-4 mt-4" type="submit" value="Enviar" color="#F0A500" >
                 Enviar 
               </v-btn>
               <v-btn class="mr-4 mt-4" @click="clear">
