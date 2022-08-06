@@ -22,7 +22,7 @@
           </a>
           <br>
           <a class="font-weight-light" href="mailto:angelm@atodamakina.cl" style="color:#F0A500; text-decoration: none;">
-            Email: angelm@atodamakina.cl
+            Email: arriendos@atodamakina.cl
           </a>
         </v-col>
         <v-col cols="12" md="6">

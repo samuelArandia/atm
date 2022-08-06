@@ -10,10 +10,10 @@
       <v-list>
         <v-list-item>
           <v-list-item-avatar>
-            <img src="../assets/atm.png" alt="Logo" />
+            <img src="../assets/atm.webp" alt="Logo" @click="$vuetify.goTo('#home-view')"/>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">A TODA MAKINA</v-list-item-title>
+            <v-list-item-title>A TODA MAKINA</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -65,15 +65,15 @@
         <v-btn text @click="$vuetify.goTo('#catalog')">
           <span class="mr-2">CATÁLOGO</span>
         </v-btn>
-        <v-btn rounded outlined text @click="$vuetify.goTo('#contact')">
+        <v-btn text @click="$vuetify.goTo('#contact')">
           <span class="mr-2">CONTÁCTANOS</span>
         </v-btn>
       </div>
       <v-spacer />
       <v-toolbar-title>
-        <v-img src="../assets/atm.png" max-width="50px" />
+        <v-img src="../assets/atm.webp" max-width="50px" @click="$vuetify.goTo('#home-view')" />
       </v-toolbar-title>
-        <v-btn class="ma-2" dark @click="toggleTheme" text rounded>
+        <v-btn class="ma-2" dark @click="toggleTheme" text>
           <v-icon v-if="$vuetify.theme.dark">
             light_mode
           </v-icon>
@@ -85,7 +85,7 @@
 
   </div>
 </template>
-
+s
 <script>
 export default {
   data: () => ({
@@ -94,7 +94,7 @@ export default {
     items: [
       ["mdi-home-outline", "Home", "#home-view"],
       ["mdi-information-outline", "Nosotros", "#about"],
-      ["mdi-information-outline", "Clientes", "#clients"],
+      ["mdi--outline", "Clientes", "#clients"],
       ["mdi-download-box-outline", "Catalogo", "#catalog"],
       ["mdi-email-outline", "Contacto", "#contact"],
     ],

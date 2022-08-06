@@ -3,7 +3,7 @@
     <v-container class="pa-4 text-center">
       <v-row align="center" justify="center">
         <v-col cols="12" md="6" class="mt-200 team">
-          <v-img src="../assets/equipo.jpg" class="d-block ml-auto mr-auto" max-width="100%" height="400px" style="box-shadow: 0px 1px 11px 0px #000000;"></v-img>
+          <v-img src="../assets/equipo.webp" class="d-block ml-auto mr-auto" max-width="100%" height="400px" style="box-shadow: 0px 1px 11px 0px #000000;"></v-img>
         </v-col>
         <v-col cols="12" md="6">
           <h2 class="font-weight-light display-2 mb-10" style="color:#F0A500;">

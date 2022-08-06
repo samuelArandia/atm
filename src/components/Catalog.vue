@@ -41,12 +41,12 @@
 </template>
 
 <script>
-import imagen1 from '@/assets/rodillo-rd7.jpg';
-import imagen2 from '@/assets/cincelador.jpg';
+import imagen1 from '@/assets/rodillo-rd7.webp';
+import imagen2 from '@/assets/cincelador.webp';
 import imagen3 from '@/assets/aspiradora.webp';
-import imagen4 from '@/assets/hormigon.png';
-import imagen5 from '@/assets/martillo.png';
-import imagen6 from '@/assets/generador.avif';
+import imagen4 from '@/assets/hormigon.webp';
+import imagen5 from '@/assets/martillo.webp';
+import imagen6 from '@/assets/generador.webp';
 
   export default {
     data: () => ({
