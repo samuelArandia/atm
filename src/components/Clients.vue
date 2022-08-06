@@ -9,15 +9,15 @@
                 <img src="../assets/grevia.jpg" class="imgCircular">
                 <img src="../assets/igh.png" class="imgCircular">
                 <img src="../assets/moller.png" class="imgCircular">
-                <img src="../assets/tecnasic.jpg" class="imgCircular">
+                <img src="../assets/tecnasic.webp" class="imgCircular">
                 <img src="../assets/demo.png" class="imgCircular">
-                <img src="../assets/suizcop.png" class="imgCircular">
-                <img src="../assets/vive.jpg" class="imgCircular">
+                <img src="../assets/suizcop.webp" class="imgCircular">
+                <img src="../assets/inarco.png" class="imgCircular">
                 <img src="../assets/paz.png" class="imgCircular">
                 <img src="../assets/izquierdo.png" class="imgCircular">
             </div>
             <v-row align="center" justify="center">
-                <h3 class="font-weight-light display-1 mt-15">ELLOS CONFIAN EN NOSOTROS</h3>
+                <h3 class="title">ELLOS CONFIAN EN NOSOTROS</h3>
             </v-row>
         </v-container>
     </section>
@@ -37,6 +37,27 @@
 }
 span{
     font-weight: bold;
+}
+.title{
+    margin-top: 5em;
+    width: 22ch;
+    animation: typing 4s steps(22),
+    blink .9s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+@keyframes blink {
+    50% {
+    border-color: transparent;
+    }
 }
 .clientes{
     display: grid;
@@ -72,4 +93,4 @@ span{
     }
 }
 
-</style>
+</style>yya
