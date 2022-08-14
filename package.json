@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node index.js",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && node swEnvBuild.js",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
