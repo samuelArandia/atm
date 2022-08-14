@@ -8,9 +8,6 @@
     "build": "vue-cli-service build && node swEnvBuild.js",
     "lint": "vue-cli-service lint"
   },
-  "engines": {
-    "node": "16.15.1"
-  },
   "dependencies": {
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
