@@ -49,6 +49,8 @@ import imagen5 from '@/assets/martillo.webp';
 import imagen6 from '@/assets/generador.webp';
 
   export default {
+      /* eslint-disable */
+    name: 'Catalog',
     data: () => ({
       icons: ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'],
       items: [

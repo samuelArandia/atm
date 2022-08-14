@@ -79,6 +79,8 @@ import { validationMixin } from 'vuelidate';
 import { email, required } from 'vuelidate/lib/validators';
 
 export default{
+  /* eslint-disable */
+  name: 'Contact',
   mixins: [validationMixin],
   data() {
     return {

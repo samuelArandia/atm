@@ -33,6 +33,7 @@ import Catalog from "../components/Catalog.vue";
 import Clients from "../components/Clients.vue";
 
 export default {
+  /* eslint-disable */
   name: "Home",
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],

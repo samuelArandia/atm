@@ -24,7 +24,10 @@
 </template>
 
 <script>
-
+export default {
+    /* eslint-disable */
+    name: 'Clients',
+}
 </script>
 
 <style scoped>

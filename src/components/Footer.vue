@@ -61,9 +61,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+    /*eslint-disable*/
+    name: 'Footer',
+};
 </script>
-            <v-card-text class="white--text text-center
+
 <style scoped>
 h2{
     margin:20px;

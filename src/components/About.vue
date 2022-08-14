@@ -38,6 +38,13 @@
   </section>
 </template>
 
+<script>
+export default {
+  /* eslint-disable */
+  name: 'About',
+}
+</script>
+
 <style scoped>
 #about{
   height: 100vh;
