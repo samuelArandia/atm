@@ -89,6 +89,7 @@ span{
     }
     .clientes{
         display: grid;
+        align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         grid-gap: 10px;
         width: auto;
